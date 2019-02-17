@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="titleText" format="string"/>
+    <attr name="titleTextColor" format="color"/>
+    <attr name="titleTextSize" format="dimension" />
+    <attr name="defaultSize" format="dimension"/>
+
+    <declare-styleable name="MyStyle">
+        <attr name="wrap_w_size" format="dimension"/>
+        <attr name="wrap_h_size" format="dimension"/>
+    </declare-styleable>
+</resources>
