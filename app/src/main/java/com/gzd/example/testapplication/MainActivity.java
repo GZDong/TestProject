@@ -5,6 +5,9 @@ import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +19,14 @@ public class MainActivity extends AppCompatActivity {
         Log.e(TAG, "onCreate: " );
         Intent intent = new Intent();
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
+        Button button = findViewById(R.id.btn_test_touch);
+        button.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Log.e("TAG", "onTouch execute, action " + event.getAction());
+                return false;
+            }
+        });
 
     }
 
@@ -60,5 +70,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        return super.dispatchTouchEvent(ev);
     }
 }

@@ -65,4 +65,6 @@ public class MyView extends View {
         //开始绘制
         canvas.drawCircle(centerX, centerY, r, paint);
     }
+
+
 }

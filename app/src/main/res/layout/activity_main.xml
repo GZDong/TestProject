@@ -12,4 +12,10 @@
        app:wrap_w_size="200dp"
        app:wrap_h_size="400dp"/>
 
+   <Button
+       android:id="@+id/btn_test_touch"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="btn_test_touch"/>
+
 </LinearLayout>
